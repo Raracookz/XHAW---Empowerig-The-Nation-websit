@@ -28,6 +28,12 @@ main .description {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
 }
 
+.aboutimage{
+  align-items: center;
+  position: relative; ;
+ top: 30px;
+ left: 350px;
+}
 
   nav{
     position: static;
