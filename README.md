@@ -29,8 +29,10 @@ Potential clients can easily access course details and contact Empowering the Na
 ## Contributors
 Molemo (Leader)
 ![Molemo](https://github.com/user-attachments/assets/ea36c098-0adb-4aba-8c87-65e3f0a27889)
+
 Callon (Project Manager)
 ![Callon](https://github.com/user-attachments/assets/e92182c6-cd64-46dd-a6aa-fdcc2aefb4f0)
+
 Ryan (Project Manager)
 ![image](https://github.com/user-attachments/assets/30dcb0e7-617d-42cc-852c-6af8e99a794e)
 
