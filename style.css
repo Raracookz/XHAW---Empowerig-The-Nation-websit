@@ -11,14 +11,19 @@
     height: -webkit-fill-available;
     min-height: 100%;
     font-family: Arial, sans-serif;
-    background: #92a48b
+    background: #92a48b;
+    
   } 
   h1 {
-    color: #92a48b;
+    color: #f9f9f9;
     font-family: 'Lobster', cursive;
     font-size: 3em;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-}
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+
 
 main .description {
     color: rgb(0, 0, 0);
@@ -26,14 +31,16 @@ main .description {
     padding: 10px;
     border-radius: 5px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); 
-}
+  }
+  .about-image{
+    align-items: center;
+    position: relative; ;
+    top: 30px;
+    left: 250px;
+    }
 
-.aboutimage{
-  align-items: center;
-  position: relative; ;
- top: 30px;
- left: 350px;
-}
+
+
 
   nav{
     position: static;
@@ -41,7 +48,7 @@ main .description {
     left: 0;
     width: 100%;
     height: 75px;
-    background: #92a48b;
+    background: #4b94ac;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   }
   nav .navbar{
@@ -52,7 +59,7 @@ main .description {
     justify-content: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 25px;
   }
   nav .navbar .logo a{
     color: #fff;
@@ -65,7 +72,7 @@ main .description {
     line-height: 70px;
   }
   nav .navbar .nav-links .links{
-      display: flex;
+    display: flex;
   }
   nav .navbar .nav-links .links li:hover{
     background-color: hsl(0, 0%, 70%);
@@ -122,6 +129,8 @@ main .description {
   .navbar .nav-links .links li:hover .sixWeek-sub-menu{
     display: block;
   }
+
+
   .navbar .search-box{
     position: relative;
     height: 40px;
@@ -178,12 +187,15 @@ main .description {
     padding: 0 15px;
     font-size: 16px;
   }
+
+
   .navbar .bx-menu,
   .nav-links .sidebar-logo .logo_name, 
   .nav-links .sidebar-logo .bx-x{
     display: none;
-  }  
-@media (max-width:900px){
+  } 
+  /*--- navbar ---*/
+@media (max-width:1100px){
   nav .navbar{
     max-width: 100%;
     padding: 0 25px;
@@ -198,18 +210,22 @@ nav .navbar .nav-links .links li a{
     font-size: 15px;
   }  
   }
-@media (max-width:800px){
+  
+  
+  /*--- sidebar ---*/
+@media (max-width:985px){
     nav .navbar .nav-links{
         display: block;
         position: fixed;
         top: 0;
-        left: 0;
+        left: -100%;
         max-width: 270px;
         width: 100%;
         background: #3e8da8;
         padding: 20px;
         line-height: 40px;
         transition: all o.5s ease;
+        z-index: 100;
     }
     nav .navbar .nav-links .sidebar-logo{
         display: flex;
@@ -219,7 +235,7 @@ nav .navbar .nav-links .links li a{
     .navbar .bx-menu,
     .nav-links .sidebar-logo .logo_name,
     .nav-links .sidebar-logo .bx-x{
-        color: #982424;
+        color: #fff;
         font-size: 25px;
         font-weight: 500;
     }
@@ -228,26 +244,27 @@ nav .navbar .nav-links .links li a{
     .nav-links .sidebar-logo .bx-x{
       display: block;
     }
-    nav .navbar .nav-links{
+    nav .navbar .nav-links .links{
         display: block;
         margin-top: 20px;
     }
     nav .navbar .nav-links .links li{
         display: block;
+        border-bottom: none;
     }
     .navbar .nav-links .links .sub-menu{
-        display: block;
+        display: none;
         position: relative;
         top: 0;
         left: 0;
         box-shadow: none;
     }
     .navbar .nav-links .links .sub-menu li{
-        bottom : none;
+        border-bottom: none;
     }
     .navbar .nav-links .links li:hover .sixMonth-sub-menu,
     .navbar .nav-links .links li:hover .sixWeek-sub-menu{
-    display: block;
+    display: none;
     }
     nav .navbar .nav-links .links li .arrow{
         line-height: 40px;
@@ -256,46 +273,72 @@ nav .navbar .nav-links .links li a{
     .navbar .nav-links .links li:hover .sixWeek-arrow{
     transform: rotate(0deg);
     }
+    .navbar .nav-links.show1 .links .sub-menu.sixMonth-sub-menu{
+      display: block;
+    }
+    .navbar .nav-links.show2 .links .sub-menu.sixWeek-sub-menu{
+      display: block;
+    }
+    .navbar .nav-links.show1 .links li .sixMonth-arrow,
+    .navbar .nav-links.show2 .links li .sixWeek-arrow{
+    transform: rotate(180deg);
+    }
 }
 
 
 
 
-.card-container {  
-    display: flex;  
-    gap: 3rem;
+
+.Co.-description{
+  font-size: xx-large; 
+}
+.mapBox {
+  margin: auto;
+  border: solid rgba(14, 13, 14, 0.1) 10px;
+  width: 100%;  
+}
+
+
+.card-container {
+  width: 80%;
+  margin: auto;
+  border: solid rgba(14, 13, 14, 0.1) 10px;
+  display: flex;
   }  
 .card {
-    margin: 0 auto;
-    padding: 0.5rem;
-    width: 100%;
-    text-align: center;
-    border-radius: 2px;
-    position: relative;  
-    color: #249690;
+  margin: 0 auto;
+  padding: 0.5rem;
+  width: 100%;
+  text-align: center;
+  border-radius: 2px;
+  position: relative;  
+  color: #000000;
   } 
+.card-description {
+  font-size: large;
+  }
   @property --angle{
     syntax: "<angle>";
     initial-value: 0deg;
     inherits: false;
   }
-  .card::after, .card::before{
-    content:'';
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-image: conic-gradient(from var(--angle) red,green,blue,purple, pink);
-    top: 50%;
-    left: 505;
-    translate: -505 -50%;
-    z-index: -1;
-    padding: 3px;
-    border-radius: 10px;
-    animation: 3s spin linear infinite;
+.card::after, .card::before{
+  content:'';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(from var(--angle) red,green,blue,purple, pink);
+  top: 50%;
+  left: 505;
+  translate: -505 -50%;
+  z-index: -1;
+  padding: 3px;
+  border-radius: 10px;
+  animation: 3s spin linear infinite;
   }
-  .card::before{
-    filter: blur(1.5rem);
-    opacity: 0.5;
+.card::before{
+  filter: blur(1.5rem);
+  opacity: 0.5;
   }
   @keyframes spin{
     from{
@@ -305,21 +348,20 @@ nav .navbar .nav-links .links li a{
       --angle: 360deg;
     }
   }
+
   
-.calculator-container {
+
+
+  .container {
     background-color: white;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(14, 13, 14, 0.1);
-    max-width: 500px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
     width: 100%;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
+
 
 .form-group {
     margin-bottom: 15px;
@@ -340,10 +382,18 @@ input[type="email"] {
     border-radius: 5px;
 }
 
+.course-list {
+    margin-bottom: 20px;
+}
 
+.course-list label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
 
 button {
-    background-color: #92a48b;
+    background-color: #28a745;
     color: white;
     padding: 10px;
     border: none;
@@ -363,6 +413,8 @@ h3 {
     font-size: 20px;
     color: #333;
 }
+
+
 
 
 .contactForm {
@@ -417,23 +469,17 @@ Buy now:hover {
   max-width: 500px;
 }
 
-
-
-/*---  * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+i{
+  font-size: 30px;
+  padding-left: 20px;
+  cursor: pointer;
 }
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  i.fa-facebook-square{
+  padding-left: 0;
+  color: #4267b2;
 }
+  i.fa-twitter-square{color: #38A1F3}
+  i.fa-instagram{color: #d72888}
+  i.fa-youtube{color: #eb1c14}
+  i.fa-linkedin{color: #0077B5}
 
-.card description{
-  font-size: larger;
-}  ---*/
